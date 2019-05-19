@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>留言板</title>
+        <style>
+            body{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .main {
+                width: 800px;
+                height: 900px;
+                border: 1px solid red;
+            }
+            .input{
+                width: 700px;
+                height: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <input id="input" class="input" type="text" placeholder="请输入你留言的内容">
+            <button onclick="submit()">提交</button>
+            <ul id="list">
+                <li>1111</li>
+                <li>22222</li>
+            </ul>
+        </div>
+
+        <script>
+            function submit() {
+                var input = document.getElementById('input').value
+                var list = document.getElementById('list')
+                var node = document.createElement("LI");
+                var textnode = document.createTextNode(input);
+                node.appendChild(textnode)
+                list.appendChild(node)
+            }
+        </script>
+    </body>
+</html>
